@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Datah</string>
+    <string name="save">Save</string>
+    <string name="data">DATABASE</string>
+    <string name="upload">UPLOAD TO CLOUD</string>
+    <string name="input_customer">input customer name</string>
+    <string name="input_number">input number</string>
+    <string name="nameerror">Enter a valid name</string>
+</resources>

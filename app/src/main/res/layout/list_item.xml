@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="13dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:id="@+id/seperator"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="40dp"
+            android:padding="5dp"
+            android:layout_height="40dp"
+            android:text="T"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:background="@drawable/circlar"
+            android:textSize="20sp"
+            android:id="@+id/textid"
+            android:textStyle="bold"
+            android:backgroundTint="#3276BB"
+            android:layout_marginRight="30dp"/>
+
+
+        <TextView
+            android:id="@+id/list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Mrs Adeyedi" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

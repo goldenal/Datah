@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:background="#fff"
+                android:contentDescription="TODO"
+                android:scaleType="center"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.044"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="50dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="18dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="127dp"
+                android:background="@drawable/circlarm"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_person_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView4"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10sp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="220dp">
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:padding="10dp"
+         android:background="@drawable/bggrad">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/dispSI"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="SI"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:id="@+id/siVALUE"
+                android:layout_height="wrap_content"
+                android:text="23"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dispUNDBST"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="UNDBST" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/underbstVAL"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="45"/>
+        </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:textColor="@color/white"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:id="@+id/dispBK"
+                 android:text="BK" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:id="@+id/bkVALUE"
+                 android:layout_height="wrap_content"
+                 android:text="23"/>
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/dispLB"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:text="LB" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:id="@+id/lbVALUE"
+                 android:layout_height="wrap_content"
+                 android:text="45"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:textColor="@color/white"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:id="@+id/dispFB"
+                 android:text="FB" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:id="@+id/fbVALUE"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:text="23"/>
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/dispSW"
+                 android:textColor="@color/white"
+                 android:layout_weight="1"
+                 android:text="SW" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:id="@+id/swVALUE"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:text="45"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:textColor="@color/white"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:id="@+id/dispWST"
+                 android:text="WST" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:id="@+id/wstVALUE"
+                 android:layout_height="wrap_content"
+                 android:text="23"/>
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/white"
+                 android:layout_weight="1"
+                 android:text="SLV" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:id="@+id/slvValue"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:text="45"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:textColor="@color/white"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:id="@+id/bstVALUE"
+                 android:text="BST" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:text="23"/>
+
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/white"
+
+                 android:layout_weight="1"
+                 android:text="KNEL" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:id="@+id/knelVALUE"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:text="45"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="0dp"
+             android:textColor="@color/white"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="GL"
+                 android:textColor="@color/white"
+                 android:layout_marginRight="20dp"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:id="@+id/glVALUE"
+                 android:textColor="@color/white"
+                 android:layout_height="wrap_content"
+                 android:text="23"/>
+
+
+         </LinearLayout>
+     </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+</ScrollView>
