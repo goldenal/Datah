@@ -34,5 +34,6 @@ public final class VicroseContract {
         public final static String COLUMN_Sw = "Sw";
         public final static String COLUMN_Slv = "Slv";
         public final static String COLUMN_Knel = "Knel";
+        public final static String COLUMN_Phone = "Phone";
     }
 }

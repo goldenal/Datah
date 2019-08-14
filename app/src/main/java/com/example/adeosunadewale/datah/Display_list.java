@@ -37,11 +37,9 @@ public class Display_list extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.display_list);
-        Log.e(LOG_TAG,"the log of wood" + currenturi);
-        ActionBar actionBar = getSupportActionBar();
         Drawable drawable = getResources().getDrawable(R.drawable.bggrad);
-        actionBar.setBackgroundDrawable(drawable);
+        ActionBar actionBar = getSupportActionBar();
+
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -49,6 +47,11 @@ public class Display_list extends AppCompatActivity implements LoaderManager.Loa
             window.setNavigationBarColor(getResources().getColor(android.R.color.transparent));
             window.setBackgroundDrawable(drawable);
         }
+        actionBar.setBackgroundDrawable(drawable);
+        setContentView(R.layout.display_list);
+        Log.e(LOG_TAG,"the log of wood" + currenturi);
+
+
 
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);

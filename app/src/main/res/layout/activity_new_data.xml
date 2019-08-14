@@ -18,25 +18,95 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:id="@+id/linearLayout">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Name:"
-            android:textSize="20sp"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_person_black_"/>
 
-            />
 
-        <EditText
-            android:id="@+id/name"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/input_customer"
-            android:inputType="textCapWords" />
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_customer"
+                android:inputType="textCapWords" />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:src="@drawable/phone"/>
+
+
+                 <android.support.design.widget.TextInputLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+                     <EditText
+                         android:id="@+id/phone_no"
+                         android:singleLine="true"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Phone Number"
+                         android:inputType="textCapWords" />
+                 </android.support.design.widget.TextInputLayout>
+
+
+             </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldSI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SI"
+                android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldGL"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="GL"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
 
 
     </LinearLayout>
@@ -45,19 +115,164 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "SI:"
-            android:textSize="20sp"
-            />
-
-        <EditText
-            android:id="@+id/textfieldSI"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/input_number"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldBK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bk"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/textfieldFB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="Fb"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/textfieldWST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Wst"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldBST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bst"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldUNDBST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="UndBst"
+                android:inputType="numberDecimal"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldLB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lb"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldSW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SW"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
 
 
     </LinearLayout>
@@ -66,81 +281,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "GL:"
-            android:textSize="20sp"
-            />
-
-        <EditText
-            android:id="@+id/textfieldGL"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/input_number"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldSLV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Slv"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "BK:"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:id="@+id/textfieldBK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/input_number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "FB:"
-            android:textSize="20sp"
-            />
-
-        <EditText
-            android:id="@+id/textfieldFB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Wst:"
-            android:textSize="20sp"
-            />
-
-        <EditText
-            android:id="@+id/textfieldWST"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
 
 
     </LinearLayout>
@@ -148,117 +305,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Bst:"
-            android:textSize="20sp"
-            />
-
-        <EditText
-            android:id="@+id/textfieldBST"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/scissors"
+            android:layout_marginRight="10dp"/>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "UndBst:"
-            android:textSize="20sp"
-            />
-
-        <EditText
-            android:id="@+id/textfieldUNDBST"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Lb:"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:id="@+id/textfieldLB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Sw:"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:id="@+id/textfieldSW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Slv:"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:id="@+id/textfieldSLV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:text = "Knel:"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:id="@+id/textfieldKNEL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Input number"
-            android:inputType="numberDecimal" />
-
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/textfieldKNEL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Knel"
+                android:singleLine="true"
+                android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 

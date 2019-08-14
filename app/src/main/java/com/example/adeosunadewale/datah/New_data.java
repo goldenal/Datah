@@ -27,7 +27,7 @@ import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.example.adeosunadewale.datah.data.VicroseContract;
 
 public class New_data extends AppCompatActivity {
-    EditText  mName,mSI, mBK,mBST,mFB,mGL,mKNEL,mLB,mSLV,mSw,mUNDBST,mWST;
+    EditText  mName,mSI, mBK,mBST,mFB,mGL,mKNEL,mLB,mSLV,mSw,mUNDBST,mWST,phon_no;
     Uri currenturi;
     int decider;
     String reformed =null, struct="";
@@ -38,10 +38,10 @@ public class New_data extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_data);
+
         ActionBar actionBar = getSupportActionBar();
         Drawable drawable = getResources().getDrawable(R.drawable.bggrad);
-        actionBar.setBackgroundDrawable(drawable);
+
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -49,21 +49,26 @@ public class New_data extends AppCompatActivity {
             window.setNavigationBarColor(getResources().getColor(android.R.color.transparent));
             window.setBackgroundDrawable(drawable);
         }
+        actionBar.setBackgroundDrawable(drawable);
+
+        setContentView(R.layout.activity_new_data);
+
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(this, R.id.name, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.nameerror);
-        mName = (EditText) findViewById(R.id.name);
-        mSI = (EditText) findViewById(R.id.textfieldSI);
-        mBK = (EditText) findViewById(R.id.textfieldBK);
-        mFB =(EditText) findViewById(R.id.textfieldFB);
-        mGL = (EditText) findViewById(R.id.textfieldGL);
-        mKNEL = (EditText) findViewById(R.id.textfieldKNEL);
-        mLB = (EditText) findViewById(R.id.textfieldLB);
-        mSLV = (EditText) findViewById(R.id.textfieldSLV);
-        mSw = (EditText) findViewById(R.id.textfieldSW);
-        mUNDBST = (EditText) findViewById(R.id.textfieldUNDBST);
-        mWST = (EditText) findViewById(R.id.textfieldWST);
-        mBST = (EditText) findViewById(R.id.textfieldBST);
+        mName =  findViewById(R.id.name);
+        mSI =  findViewById(R.id.textfieldSI);
+        mBK =  findViewById(R.id.textfieldBK);
+        mFB = findViewById(R.id.textfieldFB);
+        mGL =  findViewById(R.id.textfieldGL);
+        mKNEL =  findViewById(R.id.textfieldKNEL);
+        mLB =  findViewById(R.id.textfieldLB);
+        mSLV =  findViewById(R.id.textfieldSLV);
+        mSw =  findViewById(R.id.textfieldSW);
+        mUNDBST =  findViewById(R.id.textfieldUNDBST);
+        mWST =  findViewById(R.id.textfieldWST);
+        mBST = findViewById(R.id.textfieldBST);
+        phon_no = findViewById(R.id.phone_no);
 
         mName.setOnTouchListener(mTouch);
         mSI.setOnTouchListener(mTouch);
@@ -77,6 +82,7 @@ public class New_data extends AppCompatActivity {
         mUNDBST.setOnTouchListener(mTouch);
         mWST.setOnTouchListener(mTouch);
         mBST.setOnTouchListener(mTouch);
+        phon_no.setOnTouchListener(mTouch);
 
         Intent intent = getIntent();
         currenturi = intent.getData();
@@ -187,6 +193,15 @@ public class New_data extends AppCompatActivity {
         catch(NumberFormatException e){
 
         }
+        try{
+
+            int phone = Integer.valueOf(phon_no.getText().toString());
+            val.put(VicroseContract.VicEntry.COLUMN_Phone, phone);
+        }
+        catch(NumberFormatException e){
+
+        }
+
         if (decider == 1){
             Uri newuri = getContentResolver().insert(VicroseContract.VicEntry.CONTENT_URI, val);
             if (newuri == null){
@@ -245,7 +260,7 @@ public class New_data extends AppCompatActivity {
                  VicroseContract.VicEntry.COLUMN_GL, VicroseContract.VicEntry.COLUMN_BK,VicroseContract.VicEntry.COLUMN_Wst,
                  VicroseContract.VicEntry.COLUMN_Bst,VicroseContract.VicEntry.COLUMN_UndBst,VicroseContract.VicEntry.COLUMN_lb,
                  VicroseContract.VicEntry.COLUMN_Sw,VicroseContract.VicEntry.COLUMN_Slv,VicroseContract.VicEntry.COLUMN_Knel,
-                VicroseContract.VicEntry.COLUMN_FB
+                VicroseContract.VicEntry.COLUMN_FB, VicroseContract.VicEntry.COLUMN_Phone
         };
         Cursor cursor = getContentResolver().query(currenturi,projection,null,null,null);
         cursor.moveToFirst();
@@ -262,6 +277,7 @@ public class New_data extends AppCompatActivity {
             int c_slv = cursor.getColumnIndex(VicroseContract.VicEntry.COLUMN_Slv);
             int c_knel = cursor.getColumnIndex(VicroseContract.VicEntry.COLUMN_Knel);
             int c_fb = cursor.getColumnIndex(VicroseContract.VicEntry.COLUMN_FB);
+            int c_phone = cursor.getColumnIndex(VicroseContract.VicEntry.COLUMN_Phone);
 
             String name = cursor.getString(custName);
             float si = cursor.getFloat(c_si);
@@ -275,6 +291,7 @@ public class New_data extends AppCompatActivity {
             float slv  = cursor.getFloat(c_slv);
             float knel = cursor.getFloat(c_knel);
             float fb = cursor.getFloat(c_fb);
+            int phoneNumber = cursor.getInt(c_phone);
 
            mName.setText(name);
            mSI.setText(Float.toString(si));
@@ -288,6 +305,7 @@ public class New_data extends AppCompatActivity {
            mSLV.setText(Float.toString(slv));
            mKNEL.setText(Float.toString(knel));
             mFB.setText(Float.toString(fb));
+            phon_no.setText(Integer.toString(phoneNumber));
 
 
 

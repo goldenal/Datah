@@ -35,6 +35,9 @@ public class DisplayInDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
         Drawable drawable = getResources().getDrawable(R.drawable.bggrad);
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -46,7 +49,6 @@ public class DisplayInDetails extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(drawable);
 
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displayindetails);
 
 

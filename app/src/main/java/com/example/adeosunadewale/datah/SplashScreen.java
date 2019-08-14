@@ -52,9 +52,9 @@ private class Logolauncher extends Thread{
             catch (InterruptedException e){
                 e.printStackTrace();
             }
-            Intent intent = new Intent(SplashScreen.this,MainActivity.class);
-            startActivity(intent);
-            SplashScreen.this.finish();
+//            Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+//            startActivity(intent);
+//            SplashScreen.this.finish();
         }
 
 }

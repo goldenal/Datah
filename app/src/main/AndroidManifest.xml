@@ -9,21 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
         <activity
             android:name=".Display_list"
-            android:label="Database"></activity>
-        <activity android:name=".New_data" />
-        <activity android:name=".DisplayInDetails" />
+            android:label="Customers"></activity>
+        <activity android:name=".New_data"
+            android:label="New Customer"/>
+        <activity android:name=".DisplayInDetails"
+            android:label="Profile"/>
 
         <provider
             android:name=".data.Vprovider"
             android:authorities="com.example.adeosunadewale.datah"
             android:exported="false" />
 
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

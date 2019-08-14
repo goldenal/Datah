@@ -34,7 +34,8 @@ public class VicroseDbHelper extends SQLiteOpenHelper {
                 + VicroseContract.VicEntry.COLUMN_Slv + " REAL,"
                 + VicroseContract.VicEntry.COLUMN_Wst + " REAL,"
                 + VicroseContract.VicEntry.COLUMN_UndBst + " REAL,"
-                + VicroseContract.VicEntry.COLUMN_Sw + " REAL );";
+                + VicroseContract.VicEntry.COLUMN_Sw + " REAL,"
+                + VicroseContract.VicEntry.COLUMN_Phone + " INTEGER);";
 
         db.execSQL(SQL_CREATE_V_TABLE);
 
